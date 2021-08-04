@@ -1,0 +1,298 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>CC Form</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="../static/stylesheets/CC.css"> <!-- Подключение CSS-->
+
+	 <!--Импорт шрифта с Google Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet"> 
+
+</head>
+<body>
+    <div class="all">
+        <!-- Блок с заголовками -->
+        <div class="textology">
+            <h1 align="center">
+                Профориентация
+            </h1>
+            <h5 align="center">Designed by TajRupt</h5>
+        </div>
+    </div>
+
+    <form action="{{ url_for('predict')}}" method="POST">
+        <div class="main" align="center">
+            <!-- Главный блок, в котором находятся другие -->
+
+            <div class="inputs">
+
+                <div class="input1">
+                    <!-- Блок в котором находятся блоки с вопросом и со строкою ввода ответа -->
+                    <div class="input1__text">
+                        <!-- Блок с вопросом-->
+                        1. Уровень знания математики в % (1-100)
+                    </div>
+                    <input type="text" class="input1_buton" name="math" required autofocus> <!-- Блок со строкой ввода ответа-->
+
+                </div>
+                <div class="input1">
+                    <!-- Все блоки с вопросами до 7, связаны с классом input1-->
+                    <div class="input1__text">
+                        <!-- Блок с вопросом-->
+                        2. Навыки коммуникации в % (1-100)
+                    </div>
+                    <input type="text" class="input1_buton" name="comunication" required autofocus><!-- Блок со строкой ввода ответа-->
+
+                </div>
+                <div class="input1">
+                    <!-- Блок в котором находятся блоки с вопросом и со строкою ввода ответа -->
+                    <div class="input1__text">
+                        <!-- Блок с вопросом-->
+                        3. Сколько часов в день вы работаете? (0 - 12)
+                    </div>
+                    <input type="text" class="input1_buton" name="hours" autofocus><!-- Блок со строкой ввода ответа-->
+
+                </div>
+                <div class="input1">
+                    <!-- Блок в котором находятся блоки с вопросом и со строкою ввода ответа -->
+                    <div class="input1__text">
+                        <!-- Блок с вопросом-->
+                        4. Оцените ваш уровень логического мышления (1-8)
+                    </div>
+                    <input class="input1_buton" type="text" class="input1_buton" name="logic" autofocus><!-- Блок со строкой ввода ответа-->
+
+                </div>
+                <div class="input1">
+                    <!-- Блок в котором находятся блоки с вопросом и со строкою ввода ответа -->
+                    <div class="input1__text">
+                        <!-- Блок с вопросом-->
+                        5. Сколько раз вы участвовали в Хакатонах ? (0-6)
+                    </div>
+                    <input class="input1_buton" type="text" class="input1_buton" name="hackaton" autofocus><!-- Блок со строкой ввода ответа-->
+                </div>
+                <div class="input1">
+                    <!-- Блок в котором находятся блоки с вопросом и со строкою ввода ответа -->
+                    <div class="input1__text">
+                        <!-- Блок с вопросом-->
+                        6. Оцените свой уровень коддинга (1-9)
+                    </div>
+                    <input class="input1_buton" type="text" class="input1_buton" name="coding" autofocus><!-- Блок со строкой ввода ответа-->
+
+                </div>
+                <div class="input1">
+                    <!-- Блок в котором находятся блоки с вопросом и со строкою ввода ответа -->
+                    <div class="input1__text">
+                        <!-- Блок с вопросом-->
+                        7. Оцените свой навык публичных выступлений (1-9)
+                       
+                       <input class="input1_buton" type="text" class="input1_buton" name="public" autofocus><!-- Блок со строкой ввода ответа-->
+
+                
+                    </div>
+                
+                    <div class="new">
+                        <!-- Новый блок, блок в левом углу -->
+
+                        <h4>Какие семинары вы проходили?</h4>  <!-- Заголовок -->
+                        <!-- Это чекбоксы -->
+                        <p><input id="pol_input" type="checkbox" name="seminar" value="0">Облачные вычесления </p>
+                        <p><input id="pol_input" type="checkbox" name="seminar" value="2">Безопасность баз данных </p>
+                        <p><input id="pol_input" type="checkbox" name="seminar" value="7">Веб-технологии</p>
+                        <p><input id="pol_input" type="checkbox" name="seminar" value="1">Наука о данных</p>
+                        <p><input id="pol_input" type="checkbox" name="seminar" value="6">Тестирование </p>
+                        <p><input id="pol_input" type="checkbox" name="seminar" value="4">Взлом</p>
+                        <p><input id="pol_input" type="checkbox" name="seminar" value="3">Разработка игр</p>
+                        <p><input id="pol_input" type="checkbox" name="seminar" value="5">Системное проектирование</p>
+
+                        <h4>Взяли ли вы тест на выявление своего таланта?</h4>  <!--Заголовок -->
+                        <!-- Это чекбоксы -->
+                        <p><input id="pol_input" type="checkbox" name="talent" value="1">Да</p>
+                        <p><input id="pol_input" type="checkbox" name="talent" value="0">Нет</p>
+
+                        <h4> Участвовали вы на олимпиадах?</h4><!--Заголовок -->
+                        <!-- Это чекбоксы -->
+                        <p><input id="pol_input" type="checkbox" name="olymp" value="1">Да</p>
+                        <p><input id="pol_input" type="checkbox" name="olymp" value="0">Нет</p>
+
+                        <h4>Какой у вас уровень навыков чтения и письма?</h4><!--Заголовок -->
+                        <!-- Это чекбоксы -->
+                        <p><input id="pol_input" type="checkbox" name="writing" value="0">Отлично</p>
+                        <p><input id="pol_input" type="checkbox" name="writing" value="1">Среднее</p>
+                        <p><input id="pol_input" type="checkbox" name="writing" value="2">Плохое</p>
+
+                        <h4>Какая у вас память?</h4> <!--Заголовок -->
+                        <!-- Это чекбоксы -->
+                        <p><input id="pol_input" type="checkbox" name="memory" value="0">Отличная</p>
+                        <p><input id="pol_input" type="checkbox" name="memory" value="1">Нормальная</p>
+                        <p><input id="pol_input" type="checkbox" name="memory" value="2">Плохая</p>
+
+                        <h4>Интересующиеся вас предметы?</h4><!--Заголовок -->
+                        <!-- Это чекбоксы -->
+                        <p><input id="pol_input" type="checkbox" name="subjects" value="4">Облачные вычисления</p>
+                        <p><input id="pol_input" type="checkbox" name="subjects" value="7">Сети</p>
+                        <p><input id="pol_input" type="checkbox" name="subjects" value="6">Взлом </p>
+                        <p><input id="pol_input" type="checkbox" name="subjects" value="0">Компьютерная архитектура</p>
+                        <p><input id="pol_input" type="checkbox" name="subjects" value="9">Программирование</p>
+                        <p><input id="pol_input" type="checkbox" name="subjects" value="8">Параллельные вычисления</p>
+                        <p><input id="pol_input" type="checkbox" name="subjects" value="1">Интернет вещей</p>
+                        <p><input id="pol_input" type="checkbox" name="subjects" value="5">Инженерия данных</p>
+                        <p><input id="pol_input" type="checkbox" name="subjects" value="3">Программная инженерия</p>
+                        <p><input id="pol_input" type="checkbox" name="subjects" value="2">Менеджмент</p>
+
+                        <h4>Ожидаемая цель, зарплата или работа?</h4><!--Заголовок -->
+                        <!-- Это чекбоксы -->
+                        <p><input id="pol_input" type="checkbox" name="goal" value="1">Зарплата</p>
+                        <p><input id="pol_input" type="checkbox" name="goal" value="0">Работа</p>
+
+                        <h4>Вы в отношениях?</h4><!-- Заголовок -->
+                        <!-- Это чекбоксы -->
+                        <p><input id="pol_input" type="checkbox" name="single" value="1">Да</p>
+                        <p><input id="pol_input" type="checkbox" name="single" value="0">Нет</p>
+
+                        <h4>Какое у вас поведения?</h4><!-- Заголовок -->
+                        <!-- Это чекбоксы -->
+                        <p><input id="pol_input" type="checkbox" name="behavior" value="1">Упрямый/упертый</p>
+                        <p><input id="pol_input" type="checkbox" name="behavior" value="0">Нежный/мягкий</p>
+
+                        <h4>Вы хотите работать в управляющим отделе или в техническом?</h4><!-- Заголовок -->
+                        <!-- Это чекбоксы -->
+                        <p><input id="pol_input" type="checkbox" name="otdel" value="0">Управляющий</p>
+                        <p><input id="pol_input" type="checkbox" name="otdel" value="1">Технический	</p>
+
+                        <h4>Вы работаете усердно или с умом?</h4><!-- Заголовок -->
+                        <!-- Это чекбоксы -->
+                        <p><input id="pol_input" name="hard" type="checkbox" value="0">Усердно</p>
+                        <p><input id="pol_input" name="hard" type="checkbox" value="1">С умом</p>
+
+                        <h4>Вы когда нибудь работали в команде</h4><!-- Заголовок -->
+                        <!-- Это чекбоксы -->
+                        <p><input id="pol_input" name="team" type="checkbox" value="1">Да</p>
+                        <p><input id="pol_input" name="team" type="checkbox" value="0">Нет</p>
+
+                        <h4>Вы интроверт?</h4><!-- Заголовок -->
+                        <!-- Это чекбоксы -->
+                        <p><input id="pol_input" name="introvert" type="checkbox" value="1">Да</p>
+                        <p><input id="pol_input" name="introvert" type="checkbox" value="0">Нет</p>
+
+                        <h4>Вас мотивирует работа или зарплата??</h4><!-- Заголовок -->
+                        <!-- Это чекбоксы -->
+                        <p><input id="pol_input" name="motivation" type="checkbox" value="0">Зарплата</p>
+                        <p><input id="pol_input" name="motivation" type="checkbox" value="1">Работа</p>
+
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="pol">
+                <h4>Работали ли вы над проектом до этого времени?</h4>
+
+                <p><input id="pol_input" name="project" type="checkbox" value="1">Да</p>
+                <p><input id="pol_input" name="project" type="checkbox" value="0">Нет</p>
+
+                <h4>Cпособны ли вы к самообучению?</h4>
+
+                <p><input type="checkbox" name="self-learning" id="pol_input" value="1">Да</p>
+                <p><input type="checkbox" name="self-learning" id="pol_input" value="0">Нет</p>
+
+                <h4>Ходите ли вы на дополнительные занятия?</h4>
+
+                <p><input id="pol_input" name="extralesson" type="checkbox" value="1">Да</p>
+                <p><input id="pol_input" name="extralesson" type="checkbox" value="0">Нет</p>
+
+                <h4>Какие у вас есть сертификаты?</h4>
+
+                <p><input id="pol_input" name="certificate" type="checkbox" value="8">Программирование оболочки </p>
+                <p><input id="pol_input" name="certificate" type="checkbox" value="5">Машинное обучение </p>
+                <p><input id="pol_input" name="certificate" type="checkbox" value="0">Разработка приложений </p>
+                <p><input id="pol_input" name="certificate" type="checkbox" value="6">Python</p>
+                <p><input id="pol_input" name="certificate" type="checkbox" value="7">R программирование</p>
+                <p><input id="pol_input" name="certificate" type="checkbox" value="4">Hadoop</p>
+                <p><input id="pol_input" name="certificate" type="checkbox" value="3">Информационная безопасность</p>
+                <p><input id="pol_input" name="certificate" type="checkbox" value="1">Создание дистрибутива </p>
+                <p><input id="pol_input" name="certificate" type="checkbox" value="2">Фул стек</p>
+
+                <h4>Заинтересованная область карьеры?</h4>
+                <p><input id="pol_input" name="career" type="checkbox" value="4">Разработчик системы</p>
+                <p><input id="pol_input" name="career" type="checkbox" value="0">Аналитик бизнес-процессов</p>
+                <p><input id="pol_input" name="career" type="checkbox" value="2">Разработчик</p>
+                <p><input id="pol_input" name="career" type="checkbox" value="5">Тестирование</p>
+                <p><input id="pol_input" name="career" type="checkbox" value="3">Безопасность</p>
+                <p><input id="pol_input" name="career" type="checkbox" value="1">Облачные вычисления</p>
+
+                <h4>Что для вас важнее иметь высшее образование или опыт работы?</h4>
+                <p><input id="pol_input" name="experience" type="checkbox" value="0">Высшее образование</p>
+                <p><input id="pol_input" name="experience" type="checkbox" value="1">Работа</p>
+
+                <h4>Тип кампании в которой вы бы хотели работать?</h4><!-- Заголовок -->
+                <!-- Это чекбоксы -->
+                <p><input id="pol_input" name="company" type="checkbox" value="8">Веб-услуги</p>
+                <p><input id="pol_input" name="company" type="checkbox" value="4">Услуги SaaS</p>
+                <p><input id="pol_input" name="company" type="checkbox" value="5">Продажи и маркетинг</p>
+                <p><input id="pol_input" name="company" type="checkbox" value="7">Услуги по тестированию и обслуживанию</p>
+                <p><input id="pol_input" name="company" type="checkbox" value="9">Разработка продукта</p>
+                <p><input id="pol_input" name="company" type="checkbox" value="0">BPA	</p>
+                <p><input id="pol_input" name="company" type="checkbox" value="6">Сервис</p>
+                <p><input id="pol_input" name="company" type="checkbox" value="3">Продукт</p>
+                <p><input id="pol_input" name="company" type="checkbox" value="1">Облачные услуги</p>
+                <p><input id="pol_input" name="company" type="checkbox" value="2">Финансы</p>
+
+                <h4>На вашу профессию влияют взгляды старших людей?</h4><!-- Заголовок -->
+                <!-- Это чекбоксы -->
+                <p><input id="pol_input" name="elder" type="checkbox" value="1">Да</p>
+                <p><input id="pol_input" name="elder" type="checkbox" value="0">Нет</p>
+
+                <h4>Увлекаетесь видеоиграми?</h4><!-- Заголовок -->
+                <!-- Это чекбоксы -->
+                <p><input id="pol_input" name="games" type="checkbox" value="1">Да</p>
+                <p><input id="pol_input" name="games" type="checkbox" value="0">Нет</p>
+
+
+                <h4>Интересующийся жанры книг?</h4><!-- Заголовок -->
+                <!-- Это чекбоксы -->
+                <p><input id="pol_input" name="books" type="checkbox" value="21">Молитвенные книги</p>
+                <p><input id="pol_input" name="books" type="checkbox" value="5">Детские</p>
+                <p><input id="pol_input" name="books" type="checkbox" value="29">О путешествиях</p>
+                <p><input id="pol_input" name="books" type="checkbox" value="23">Романтические</p>
+                <p><input id="pol_input" name="books" type="checkbox" value="7">Кулинарные книги</p>
+                <p><input id="pol_input" name="books" type="checkbox" value="27">Саморазвитие</p>
+                <p><input id="pol_input" name="books" type="checkbox" value="10">Драма</p>
+                <p><input id="pol_input" name="books" type="checkbox" value="18">Математика</p>
+                <p><input id="pol_input" name="books" type="checkbox" value="22">Религия-духовность</p>
+                <p><input id="pol_input" name="books" type="checkbox" value="1">Антология</p>
+                <p><input id="pol_input" name="books" type="checkbox" value="30">Трилогия</p>
+                <p><input id="pol_input" name="books" type="checkbox" value="3">Автобиографии</p>
+                <p><input id="pol_input" name="books" type="checkbox" value="19">Мистерия</p>
+                <p><input id="pol_input" name="books" type="checkbox" value="8">Дневники</p>
+                <p><input id="pol_input" name="books" type="checkbox" value="17">Журналы</p>
+                <p><input id="pol_input" name="books" type="checkbox" value="15">История</p>
+                <p><input id="pol_input" name="books" type="checkbox" value="2">Искусство</p>
+                <p><input id="pol_input" name="books" type="checkbox" value="9">Словари</p>
+                <p><input id="pol_input" name="books" type="checkbox" value="16">Ужас</p>
+                <p><input id="pol_input" name="books" type="checkbox" value="11">Энциклопедии</p>
+                <p><input id="pol_input" name="books" type="checkbox" value="0">Экшн и приключения</p>
+                <p><input id="pol_input" name="books" type="checkbox" value="12">Фэнтези</p>
+                <p><input id="pol_input" name="books" type="checkbox" value="6">Комиксы</p>
+                <p><input id="pol_input" name="books" type="checkbox" value="26">Научная фантастика</p>
+                <p><input id="pol_input" name="books" type="checkbox" value="28">Серия</p>
+                <p><input id="pol_input" name="books" type="checkbox" value="13">Руководство</p>
+                <p><input id="pol_input" name="books" type="checkbox" value="4">Биографии</p>
+                <p><input id="pol_input" name="books" type="checkbox" value="14">Здоровье</p>
+                <p><input id="pol_input" name="books" type="checkbox" value="24">Сатира</p>
+                <p><input id="pol_input" name="books" type="checkbox" value="25">Наука</p>
+                <p><input id="pol_input" name="books" type="checkbox" value="20">Поэзия</p>
+
+                <!-- Кнопка Enter -->
+                <button type="submit" id="button_enter" value="Enter">Enter</button>
+
+
+            </div>
+
+        </div>
+    </form>
+    <center><h2 style="background-color:green; color:white">{{ result_text }}</h2></center>
+</body>
+</html>
