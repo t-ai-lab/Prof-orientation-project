@@ -1,6 +1,7 @@
 1 Install python
 2 Open cmd and write:
 pip install pandas,numpy,sklearn,flask
-3 Run the python code
-4 In the google chrome put the link which the python 
+3 Download all files from github
+4 Run the python code
+5 In the google chrome put the link which the python 
 code gives out and you will get the interface 
